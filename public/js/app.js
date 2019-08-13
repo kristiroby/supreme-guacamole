@@ -45,7 +45,8 @@ app.controller('mainController', ['$http', function($http){
           name: this.name,
           description: this.description,
           image: this.image,
-          ingredients: this.ingredients
+          ingredients: this.ingredients,
+          category: this.category
         }
       }).then(function(response){
         controller.getGuac();

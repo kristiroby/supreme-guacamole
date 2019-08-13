@@ -1,11 +1,13 @@
 const mongoose = require('mongoose');
 
-const foodSchema = new mongoose.Schema({
+const guacSchema = new mongoose.Schema({
     name: String,
+    description: String,
     image: String,
+    ingredients: [String],
     category: String
 });
 
-const Food = mongoose.model('Food', foodSchema);
+const Guac = mongoose.model('Food', foodSchema);
 
-module.exports = Food;
+module.exports = Guac;
