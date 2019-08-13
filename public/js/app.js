@@ -7,7 +7,10 @@ app.controller('mainController', ['$http', function($http){
         method: 'POST',
         url: '/guac',
         data: {
-
+          name: this.name,
+          description: this.description,
+          image: this.image,
+          ingredients: this.ingredients
         }
       }).then(function(response){
 
@@ -38,7 +41,10 @@ app.controller('mainController', ['$http', function($http){
         method: 'PUT',
         url: '/guac/' + guac._id,
         data: {
-
+          name: this.name,
+          description: this.description,
+          image: this.image,
+          ingredients: this.ingredients
         }
       }).then(function(response){
         controller.getGuac();
