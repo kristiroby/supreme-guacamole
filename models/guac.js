@@ -8,6 +8,6 @@ const guacSchema = new mongoose.Schema({
     category: String
 });
 
-const Guac = mongoose.model('Food', foodSchema);
+const Guac = mongoose.model('Guac', guacSchema);
 
 module.exports = Guac;
