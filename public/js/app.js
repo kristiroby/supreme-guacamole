@@ -29,7 +29,7 @@ app.controller('mainController', ['$http', function($http){
         console.log(error);
       })
     }
-    this.deleteGuac = () => {
+    this.deleteGuac = (guac) => {
       $http({
         method: "DELETE",
         url: '/guac/' + guac._id
@@ -37,7 +37,7 @@ app.controller('mainController', ['$http', function($http){
         controller.getGuac();
       })
     }
-    this.editGuac = () => {
+    this.editGuac = (guac) => {
       $http({
         method: 'PUT',
         url: '/guac/' + guac._id,
