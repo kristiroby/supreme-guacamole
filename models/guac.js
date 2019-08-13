@@ -4,7 +4,7 @@ const guacSchema = new mongoose.Schema({
     name: String,
     description: String,
     image: String,
-    ingredients: [String],
+    ingredients: String,
     category: String
 });
 
