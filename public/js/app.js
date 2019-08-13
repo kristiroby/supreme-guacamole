@@ -42,11 +42,11 @@ app.controller('mainController', ['$http', function($http){
         method: 'PUT',
         url: '/guac/' + guac._id,
         data: {
-          name: this.name,
-          description: this.description,
-          image: this.image,
-          ingredients: this.ingredients,
-          category: this.category
+          name: this.updatedName,
+          description: this.updatedDescription,
+          image: this.updatedImage,
+          ingredients: this.updatedIngredients,
+          category: this.updatedCategory
         }
       }).then(function(response){
         controller.getGuac();
