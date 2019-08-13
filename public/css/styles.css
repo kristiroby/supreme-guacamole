@@ -1,12 +1,11 @@
 body {
     font-family: "Varela Round", sans-serif;
-    background-color: black;
 }
 h1 {
     text-align: center;
     background-color: rgb(122, 199, 79);
     padding: 2em;
-    border: .25em solid white;
+    border: .25em solid black;
 }
 form {
     display: flex;
