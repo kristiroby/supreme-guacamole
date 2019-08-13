@@ -10,10 +10,11 @@ app.controller('mainController', ['$http', function($http){
           name: this.name,
           description: this.description,
           image: this.image,
-          ingredients: this.ingredients
+          ingredients: this.ingredients,
+          category: this.category
         }
       }).then(function(response){
-
+        controller.getGuac();
       }, function(error){
         console.log(error);
       })
@@ -23,7 +24,7 @@ app.controller('mainController', ['$http', function($http){
         method: 'GET',
         url: '/guac'
       }).then(function(response){
-        this.guac = response.data;
+        controller.guac = response.data;
       }, function(error){
         console.log(error);
       })
@@ -44,7 +45,8 @@ app.controller('mainController', ['$http', function($http){
           name: this.name,
           description: this.description,
           image: this.image,
-          ingredients: this.ingredients
+          ingredients: this.ingredients,
+          category: this.category
         }
       }).then(function(response){
         controller.getGuac();
