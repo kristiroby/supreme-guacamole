@@ -32,11 +32,11 @@
             <button ng-click="ctrl.deleteGuac(guac)">Delete</button>
             <!--Edit Guacamole recipe item -->
             <form ng-submit="ctrl.editGuac(guac)">
-              <input type="text" ng-model="ctrl.updateName" placeholder="{{guac.name}}" />
-              <input type="text" ng-model="ctrl.updatedDescription" placeholder="{{guac.description}}" />
-              <input type="text" ng-model="ctrl.updatedImage" placeholder="{{guac.image}}" />
-              <input type="text" ng-model="ctrl.updatedIngredients" placeholder="{{guac.ingredients}}" />
-              <input type="text" ng-model="ctrl.updatedCategory" placeholder="{{guac.category}}"/>
+              <input type="text" ng-model="ctrl.updatedName" value="{{guac.name}}" />
+              <input type="text" ng-model="ctrl.updatedDescription" value="{{guac.description}}" />
+              <input type="text" ng-model="ctrl.updatedImage" value="{{guac.image}}" />
+              <input type="text" ng-model="ctrl.updatedIngredients" value="{{guac.ingredients}}" />
+              <input type="text" ng-model="ctrl.updatedCategory" value="{{guac.category}}"/>
               <input type="submit" value="Update Recipe">
             </form>
         </li>
