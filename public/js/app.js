@@ -30,7 +30,7 @@ app.controller('mainController', ['$http', function($http){
     }
     this.deleteGuac = () => {
       $http({
-        method: "DELETE"
+        method: "DELETE",
         url: '/guac/' + guac._id
       }).then(function(){
         controller.getGuac();
