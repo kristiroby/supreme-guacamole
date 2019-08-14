@@ -20,3 +20,7 @@ input[type="submit"] {
     background-color: rgb(230, 126, 46);
     padding: 1em;
 }
+image {
+    max-width: 150px:
+    height: auto;
+}
