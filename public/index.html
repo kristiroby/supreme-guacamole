@@ -13,6 +13,7 @@
 <body ng-controller="mainController as ctrl">
     <h1>Holy Guacamole!</h1>
     <!-- Create new Guacamole Recipe -->
+    <div class="white-background">
     <form ng-submit="ctrl.createGuac()">
         <input type="text" placeholder="name" ng-model="ctrl.name" />
         <input type="text" ng-model="ctrl.description" placeholder="description" />
@@ -24,22 +25,28 @@
     <ul>
         <li ng-repeat="guac in ctrl.guac">
             <!-- Individual data info headers for each item -->
+        
             <h6> Name: {{guac.name}} </h6>
             <h6> Description: {{guac.description}} </h6>
             <img class="slide-in-left" src="{{guac.image}}" alt="{{guac.name}}" height="50%" width="50%">
             <h6>Ingredients: {{guac.ingredients}}</h6>
             <h6>Category: {{guac.category}}</h6>
             <button ng-click="ctrl.deleteGuac(guac)">Delete</button>
+            <button ng-click="ctrl.toggleForm()">Update</button>
             <!--Edit Guacamole recipe item -->
+            <div ng-show="ctrl.showForm">
             <form ng-submit="ctrl.editGuac(guac)">
-              <input type="text" ng-model="ctrl.updatedName" value="{{guac.name}}" />
-              <input type="text" ng-model="ctrl.updatedDescription" value="{{guac.description}}" />
-              <input type="text" ng-model="ctrl.updatedImage" value="{{guac.image}}" />
-              <input type="text" ng-model="ctrl.updatedIngredients" value="{{guac.ingredients}}" />
-              <input type="text" ng-model="ctrl.updatedCategory" value="{{guac.category}}"/>
-              <input type="submit" value="Update Recipe">
-            </form>
+              <input class="edit" type="text" ng-model="ctrl.updatedName" placeholder="{{guac.name}}" />
+              <input class="edit" type="text" ng-model="ctrl.updatedDescription" placeholder="{{guac.description}}" />
+              <input class="edit" type="text" ng-model="ctrl.updatedImage" placeholder="{{guac.image}}" />
+              <input class="edit" type="text" ng-model="ctrl.updatedIngredients" placeholder="{{guac.ingredients}}" />
+              <input class="edit" type="text" ng-model="ctrl.updatedCategory" placeholder="{{guac.category}}"/>
+              <input ng-click="ctrl.toggleForm()" type="submit" value="Update Recipe">
+             </form>
+            </div>
+           
         </li>
     </ul>
+</div>
 </body>
 </html>
