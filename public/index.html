@@ -24,10 +24,10 @@
     <ul>
         <li ng-repeat="guac in ctrl.guac">
             <!-- Individual data info headers for each item -->
-            <h6>Name: {{guac.name}} </h6>
-            <h6>Description: {{guac.description}} </h6>
-            <img src="{{guac.image}}" alt="{{guac.name}}">
-            <h6>Ingrediants: {{guac.ingredients}}</h6>
+            <h6> Name: {{guac.name}} </h6>
+            <h6> Description: {{guac.description}} </h6>
+            <img src="{{guac.image}}" alt="{{guac.name}}" >
+            <h6>Ingredients: {{guac.ingredients}}</h6>
             <h6>Category: {{guac.category}}</h6>
             <button ng-click="ctrl.deleteGuac(guac)">Delete</button>
             <!--Edit Guacamole recipe item -->
