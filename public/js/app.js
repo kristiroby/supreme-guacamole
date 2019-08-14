@@ -10,10 +10,11 @@ app.controller('mainController', ['$http', function($http){
           name: this.name,
           description: this.description,
           image: this.image,
-          ingredients: this.ingredients
+          ingredients: this.ingredients,
+          category: this.category
         }
       }).then(function(response){
-
+        controller.getGuac();
       }, function(error){
         console.log(error);
       })
@@ -23,28 +24,29 @@ app.controller('mainController', ['$http', function($http){
         method: 'GET',
         url: '/guac'
       }).then(function(response){
-        this.guac = response.data;
+        controller.guac = response.data;
       }, function(error){
         console.log(error);
       })
     }
-    this.deleteGuac = () => {
+    this.deleteGuac = (guac) => {
       $http({
-        method: "DELETE"
+        method: "DELETE",
         url: '/guac/' + guac._id
       }).then(function(){
         controller.getGuac();
       })
     }
-    this.editGuac = () => {
+    this.editGuac = (guac) => {
       $http({
         method: 'PUT',
         url: '/guac/' + guac._id,
         data: {
-          name: this.name,
-          description: this.description,
-          image: this.image,
-          ingredients: this.ingredients
+          name: this.updatedName,
+          description: this.updatedDescription,
+          image: this.updatedImage,
+          ingredients: this.updatedIngredients,
+          category: this.updatedCategory
         }
       }).then(function(response){
         controller.getGuac();
