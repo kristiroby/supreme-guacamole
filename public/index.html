@@ -36,11 +36,11 @@
             <!--Edit Guacamole recipe item -->
             <div ng-show="ctrl.showForm">
             <form ng-submit="ctrl.editGuac(guac)">
-              <input class="edit" type="text" ng-model="ctrl.updatedName" value="{{guac.name}}" />
-              <input class="edit" type="text" ng-model="ctrl.updatedDescription" value="{{guac.description}}" />
-              <input class="edit" type="text" ng-model="ctrl.updatedImage" value="{{guac.image}}" />
-              <input class="edit" type="text" ng-model="ctrl.updatedIngredients" value="{{guac.ingredients}}" />
-              <input class="edit" type="text" ng-model="ctrl.updatedCategory" value="{{guac.category}}"/>
+              <input class="edit" type="text" ng-model="ctrl.updatedName" placeholder="{{guac.name}}" />
+              <input class="edit" type="text" ng-model="ctrl.updatedDescription" placeholder="{{guac.description}}" />
+              <input class="edit" type="text" ng-model="ctrl.updatedImage" placeholder="{{guac.image}}" />
+              <input class="edit" type="text" ng-model="ctrl.updatedIngredients" placeholder="{{guac.ingredients}}" />
+              <input class="edit" type="text" ng-model="ctrl.updatedCategory" placeholder="{{guac.category}}"/>
               <input ng-click="ctrl.toggleForm()" type="submit" value="Update Recipe">
              </form>
             </div>
