@@ -26,7 +26,7 @@
             <!-- Individual data info headers for each item -->
             <h6> Name: {{guac.name}} </h6>
             <h6> Description: {{guac.description}} </h6>
-            <img src="{{guac.image}}" alt="{{guac.name}}" >
+            <img class="slide-in-left" src="{{guac.image}}" alt="{{guac.name}}" height="50%" width="50%">
             <h6>Ingredients: {{guac.ingredients}}</h6>
             <h6>Category: {{guac.category}}</h6>
             <button ng-click="ctrl.deleteGuac(guac)">Delete</button>
