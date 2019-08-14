@@ -1,29 +1,54 @@
 
 body {
     font-family: "Varela Round", sans-serif;
+    background-color:  turquoise;
+}
+.white-background {
+  background-color: white;
+  padding:10px;
+  border: .25em solid black;
 }
 h1 {
     text-align: center;
     background-color: rgb(122, 199, 79);
     padding: 2em;
-    border: .25em solid black;
+    border: .1em solid black;
+    color: white;
+    font-size: 40px;
+    font-weight: 900;
 }
 form {
     display: flex;
     justify-content: center;
+    font-family: "Varela Round", sans-serif;
 }
 input {
-    line-height: 14px;
     margin: 1em;
-    font-size: 14px
+    font-size: 14px;
+    border: 2px solid;
 }
 input[type="submit"] {
-    background-color: rgb(230, 126, 46);
-    padding: 1em;
+    background-color: rgb(230, 83, 46);
+    color: white;
+    padding: 10px;
+    border: 2px solid black;
+    font-size: 18px;
 }
 img {
     max-width: 150px;
     height: auto;
+}
+li {
+  text-align: center;
+  font-size: 24px;
+  list-style: none;
+}
+button {
+  background-color: rgb(230, 83, 46);
+  padding: 8px;
+  font-size: 16px;
+  color: white;
+  border: 2px solid black;
 }
 .slide-in-left {
 	-webkit-animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;

@@ -2,6 +2,11 @@ const app = angular.module('guac', []);
 
 app.controller('mainController', ['$http', function($http){
   const controller = this;
+  this.showForm = false;
+  
+  this.toggleForm = () => {
+    this.showForm = !this.showForm;
+  }
     this.createGuac = () => {
       $http({
         method: 'POST',
